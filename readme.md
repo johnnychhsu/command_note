@@ -28,10 +28,13 @@ Then if want to run .sql file, run :
 ```
 \. file.sql ;
 ```
-i
+
 ### Git Alias Command
 This is useful. Save time.
 ```
 git config --global alias.st status
 git config --global alias.ci commit
 ```
+
+### Pyenv and Pipenv
+Reference : https://hackernoon.com/reaching-python-development-nirvana-bb5692adf30c

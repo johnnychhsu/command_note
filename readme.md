@@ -36,5 +36,9 @@ git config --global alias.st status
 git config --global alias.ci commit
 ```
 
+### personal .vimrc
+Save my .vimrc with plugin.
+
+
 ### Pyenv and Pipenv
 Reference : https://hackernoon.com/reaching-python-development-nirvana-bb5692adf30c

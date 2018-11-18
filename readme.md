@@ -15,6 +15,15 @@ ssh -N -f -L [local_port]:localhost:[remote_port] [User]@remote_machine
 ord() : take str as input, output its ascii.
 chr() : take number as input, output its str.
 
+#### Sort
+In Python2.x, we can use `cmp` as our comparison function for sorting. In Python3.x, there is no `cmp` argument. We can use cmp_to_keym to specify our comparison function as input for `key` argument.
+`
+from functools import cmp_to_key
+a=[5,3,4,2,7]
+a=list(map(str, a))
+sorted(a, key=cmp_to_key(lambda x, y: x+y > x-y), reverse=True)
+`
+
 ### Mysqlsh Note
 When in mysqlsh, first need to connect to the SQL server.
 ```

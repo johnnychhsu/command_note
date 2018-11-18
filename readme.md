@@ -62,3 +62,8 @@ Here is some plugin note:
 
 ### Pyenv and Pipenv
 Reference : https://hackernoon.com/reaching-python-development-nirvana-bb5692adf30c
+
+### Markdown cheatsheet
+#### Code block
+\```[code name]
+\```

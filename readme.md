@@ -10,6 +10,9 @@ Then run this on local machine
 ```
 ssh -N -f -L [local_port]:localhost:[remote_port] [User]@remote_machine
 ```
+#### Convert Ipython notebook to py file
+jupyter nbconvert --to script file.ipynb
+
 
 ### Python Tip
 ord() : take str as input, output its ascii.

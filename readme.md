@@ -10,6 +10,18 @@ Then run this on local machine
 ```
 ssh -N -f -L [local_port]:localhost:[remote_port] [User]@remote_machine
 ```
+
+#### Add virtualenv in Jupyter lab
+First source your virtualenv, then install ipykernel
+```
+pip install ipykernel
+```
+Then install your virtualenv into Ipykernel
+```
+python -m ipykernel install --user --name=<virtualenv_name>
+```
+Run jupyter lab, change the kernel.
+
 #### Convert Ipython notebook to py file
 jupyter nbconvert --to script file.ipynb
 

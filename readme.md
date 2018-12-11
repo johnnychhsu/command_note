@@ -75,12 +75,17 @@ Then if want to run .sql file, run :
 \. file.sql ;
 ```
 
-### Git Alias Command
+### Git
+#### Alias
 This is useful. Save time.
 ```
 git config --global alias.st status
 git config --global alias.ci commit
 ```
+
+#### Branch
+1. Delete branch
+`git branch -d branch_name`
 
 ### personal .vimrc
 Save my .vimrc with plugin.

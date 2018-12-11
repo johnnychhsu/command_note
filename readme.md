@@ -27,8 +27,12 @@ jupyter nbconvert --to script file.ipynb
 
 
 ### Python Tip
+
+#### Miscellaneous
 ord() : take str as input, output its ascii.
 chr() : take number as input, output its str.
+  
+Tuple is faster than list.
 
 #### Sort
 In Python2.x, we can use `cmp` as our comparison function for sorting. In Python3.x, there is no `cmp` argument. We can use cmp_to_keym to specify our comparison function as input for `key` argument.
@@ -39,6 +43,23 @@ a=[5,3,4,2,7]
 a=list(map(str, a))
 sorted(a, key=cmp_to_key(lambda x, y: x+y > x-y), reverse=True)
 ```
+
+#### collections
+A useful built-in library. Helps in lots of tasks.
+1. deque
+    1. pop()
+    2. popleft()
+    3. extend()
+    4. extendleft()
+2. namedtuple
+    1. `Identity = namedtuple('Identity', 'name, age, gender')`. But this is slower than dict.
+3. ChainMap
+    1. `dict = ChainMap(dict_1, dict_2, doct_3)`. Helps to chain dict together.
+4. Counter
+    1. `Counter(list())`. We can initialize Counter with a list, also we can update the list later.
+5. OrderedDict
+6. defaultdict
+    1. `defaultdict(func)`. If no related key in the dict, return the func we define for the initialization.
 
 ### Mysqlsh Note
 When in mysqlsh, first need to connect to the SQL server.

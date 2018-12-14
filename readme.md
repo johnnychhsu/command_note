@@ -88,7 +88,13 @@ git config --global alias.ci commit
 `git branch -d branch_name`
 
 ### personal .vimrc
-Save my .vimrc with plugin.
+First run this command : 
+
+```commandline
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+```
+
+Then Save my .vimrc with plugin.
 After add plugin into .vimrc, type `:PluginInstall`.
 
 Here is some plugin note:
@@ -108,3 +114,14 @@ Reference : https://hackernoon.com/reaching-python-development-nirvana-bb5692adf
 #### Code block
 \```[code name]
 \```
+
+### MySQL related
+#### Local infile
+If you want to load file into database from client side, you have to set `local_infile` on both on client and server side.
+Run command below : 
+```sql
+SHOW GLOBAL VARIABLES LIKE 'local_infile';
+SET GLOBAL local_infile = 'ON';
+SHOW GLOBAL VARIABLES LIKE 'local_infile';
+```
+to check and set the variable.

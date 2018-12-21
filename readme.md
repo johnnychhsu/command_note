@@ -118,6 +118,8 @@ Reference : https://hackernoon.com/reaching-python-development-nirvana-bb5692adf
 #### Code block
 \```[code name]
 \```
+#### Links
+1. [The topic or words](The links)
 
 ### MySQL related
 #### Local infile

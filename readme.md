@@ -29,10 +29,14 @@ jupyter nbconvert --to script file.ipynb
 ### Python Tip
 
 #### Miscellaneous
-ord() : take str as input, output its ascii.
-chr() : take number as input, output its str.
-  
-Tuple is faster than list.
+**Built-In Function**
+1. `ord(str)` : take str as input, output its ascii.
+2. `chr(int)` : take number as input, output its str.
+3. `callable(arg)` : If arg is callable (such as function), return True, else False. 
+4. `getattr(obj, name)(args)` : Get the attribute `name` (obj's function or attribute). we can use this to pass an obj and call its function in other place.
+
+**Tips**  
+Tuple is faster than list, because it is not mutable.
 
 #### Sort
 In Python2.x, we can use `cmp` as our comparison function for sorting. In Python3.x, there is no `cmp` argument. We can use cmp_to_keym to specify our comparison function as input for `key` argument.

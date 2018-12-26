@@ -131,3 +131,10 @@ SET GLOBAL local_infile = 'ON';
 SHOW GLOBAL VARIABLES LIKE 'local_infile';
 ```
 to check and set the variable.
+
+### Linux
+#### Check open port
+**list open port**
+```command
+sudo lsof -i
+```

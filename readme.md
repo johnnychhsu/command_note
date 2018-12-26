@@ -138,3 +138,12 @@ to check and set the variable.
 ```command
 sudo lsof -i
 ```
+
+**Kill TCP connection**
+```command
+# Kill all ftp connection
+tcpkill -i eth0 port 21
+
+# Kill all packets from designated address
+tcpkill hot 192.168.1.2
+```

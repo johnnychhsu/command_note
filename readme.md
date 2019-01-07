@@ -61,6 +61,19 @@ A useful built-in library. Helps in lots of tasks.
 6. defaultdict
     1. `defaultdict(func)`. If no related key in the dict, return the func we define for the initialization.
 
+#### Min for dictionary
+```python
+a = {5:1, 6:2, 7:3}
+
+# will print 5
+min(a)
+
+a = {'a':1, 'b':2}
+
+# will print 'a'
+min(a)
+```
+
 ### Mysqlsh Note
 When in mysqlsh, first need to connect to the SQL server.
 ```

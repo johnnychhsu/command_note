@@ -29,10 +29,14 @@ jupyter nbconvert --to script file.ipynb
 ### Python Tip
 
 #### Miscellaneous
-ord() : take str as input, output its ascii.
-chr() : take number as input, output its str.
-  
-Tuple is faster than list.
+**Built-In Function**
+1. `ord(str)` : take str as input, output its ascii.
+2. `chr(int)` : take number as input, output its str.
+3. `callable(arg)` : If arg is callable (such as function), return True, else False. 
+4. `getattr(obj, name)(args)` : Get the attribute `name` (obj's function or attribute). we can use this to pass an obj and call its function in other place.
+
+**Tips**  
+Tuple is faster than list, because it is not mutable.
 
 #### Sort
 In Python2.x, we can use `cmp` as our comparison function for sorting. In Python3.x, there is no `cmp` argument. We can use cmp_to_keym to specify our comparison function as input for `key` argument.
@@ -74,6 +78,15 @@ a = {'a':1, 'b':2}
 min(a)
 ```
 
+#### Bisect
+```python
+def grade(score,breakpoints=[60, 70, 80, 90], grades='FDCBA'):
+    i = bisect.bisect(breakpoints, score)
+    return grades[i]
+
+print [grade(score) for score in [33, 99, 77, 70, 89, 90, 100]]
+```
+
 ### Mysqlsh Note
 When in mysqlsh, first need to connect to the SQL server.
 ```
@@ -101,7 +114,13 @@ git config --global alias.ci commit
 `git branch -d branch_name`
 
 ### personal .vimrc
-Save my .vimrc with plugin.
+First run this command : 
+
+```commandline
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+```
+
+Then Save my .vimrc with plugin.
 After add plugin into .vimrc, type `:PluginInstall`.
 
 Here is some plugin note:
@@ -121,3 +140,32 @@ Reference : https://hackernoon.com/reaching-python-development-nirvana-bb5692adf
 #### Code block
 \```[code name]
 \```
+#### Links
+1. [The topic or words](The links)
+
+### MySQL related
+#### Local infile
+If you want to load file into database from client side, you have to set `local_infile` on both on client and server side.
+Run command below : 
+```sql
+SHOW GLOBAL VARIABLES LIKE 'local_infile';
+SET GLOBAL local_infile = 'ON';
+SHOW GLOBAL VARIABLES LIKE 'local_infile';
+```
+to check and set the variable.
+
+### Linux
+#### Check open port
+**list open port**
+```command
+sudo lsof -i
+```
+
+**Kill TCP connection**
+```command
+# Kill all ftp connection
+tcpkill -i eth0 port 21
+
+# Kill all packets from designated address
+tcpkill hot 192.168.1.2
+```

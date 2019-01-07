@@ -70,12 +70,12 @@ A useful built-in library. Helps in lots of tasks.
 a = {5:1, 6:2, 7:3}
 
 # will print 5
-min(a)
+min(a, key=a.get)
 
 a = {'a':1, 'b':2}
 
 # will print 'a'
-min(a)
+min(a. key=a.get)
 ```
 
 #### Bisect

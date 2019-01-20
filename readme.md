@@ -87,6 +87,16 @@ def grade(score,breakpoints=[60, 70, 80, 90], grades='FDCBA'):
 print [grade(score) for score in [33, 99, 77, 70, 89, 90, 100]]
 ```
 
+#### list.insert()
+```python
+a = []
+a.insert(0,4)
+# a = [4]
+a.insert(8,55)
+# a = [4,55]
+# Even though the index is out off range, insert will put it at the last position
+```
+
 ### Mysqlsh Note
 When in mysqlsh, first need to connect to the SQL server.
 ```

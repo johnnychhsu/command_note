@@ -30,7 +30,7 @@ jupyter nbconvert --to script file.ipynb
 
 #### Miscellaneous
 **Built-In Function**
-1. `ord(str)` : take str as input, output its ascii.
+1. `ord(str)` : take str as input, output its ascii or unicode.
 2. `chr(int)` : take number as input, output its str.
 3. `callable(arg)` : If arg is callable (such as function), return True, else False. 
 4. `getattr(obj, name)(args)` : Get the attribute `name` (obj's function or attribute). we can use this to pass an obj and call its function in other place.
@@ -53,8 +53,10 @@ A useful built-in library. Helps in lots of tasks.
 1. deque
     1. pop()
     2. popleft()
-    3. extend()
-    4. extendleft()
+    3. extend(iterable)
+    4. extendleft(iterable)
+    5. append()
+    6. appendleft()
 2. namedtuple
     1. `Identity = namedtuple('Identity', 'name, age, gender')`. But this is slower than dict.
 3. ChainMap

@@ -98,6 +98,18 @@ a.insert(8,55)
 # a = [4,55]
 # Even though the index is out off range, insert will put it at the last position
 ```
+#### heapq
+Heapq will take item in list order by index as the priority.
+```python
+import heapq
+a = []
+heapq.heappush(a, [[1,'sss',
+                    2, 'ddd'
+                    3, 'fff']])
+# will pop out [1, 'sss']
+heappop(a)
+```
+To avoid the same priority, we can add the push order index as an item in the middle. If there are items that have the same priority, the push order can be the judge.
 
 ### Mysqlsh Note
 When in mysqlsh, first need to connect to the SQL server.

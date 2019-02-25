@@ -111,6 +111,19 @@ heappop(a)
 ```
 To avoid the same priority, we can add the push order index as an item in the middle. If there are items that have the same priority, the push order can be the judge.
 
+#### Scope
+If we want to access a variable like this : 
+```python
+def f(): 
+    print(s)
+    s = "I love London!"
+    print(s) 
+
+s = "I love Paris!" 
+f()
+```
+This will lead to `UnboundLocalError: local variable 's' referenced before assignment`. Because this first time we use `s` in `f()`, we try to treat `s` as global variable. Then we want to assign a value to `s`, this causes ambiguity, thus python will report an error.
+
 ### Mysqlsh Note
 When in mysqlsh, first need to connect to the SQL server.
 ```

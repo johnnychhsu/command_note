@@ -206,3 +206,7 @@ tcpkill -i eth0 port 21
 # Kill all packets from designated address
 tcpkill hot 192.168.1.2
 ```
+
+#### Command 
+1. [40 useful commands](https://vitux.com/40-most-used-ubuntu-commands/)
+

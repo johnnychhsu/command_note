@@ -124,6 +124,13 @@ f()
 ```
 This will lead to `UnboundLocalError: local variable 's' referenced before assignment`. Because this first time we use `s` in `f()`, we try to treat `s` as global variable. Then we want to assign a value to `s`, this causes ambiguity, thus python will report an error.
 
+#### divmod
+This is a built-in function.
+```python
+a, b = divmod(6,4)
+# a = 1, b = 2
+```
+
 ### Mysqlsh Note
 When in mysqlsh, first need to connect to the SQL server.
 ```

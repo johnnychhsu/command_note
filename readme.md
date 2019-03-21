@@ -214,6 +214,18 @@ tcpkill -i eth0 port 21
 tcpkill hot 192.168.1.2
 ```
 
+# Change locale environment variable
+First check current setting
+```
+locale
+```
+Then add what we want as a file contain following as example to `/var/lib/locales/supported.d/locale`
+```
+zh_TW.UTF-8 UTF-8
+en_US.UTF-8 UTF-8
+```
+We can use `sudo update-locale LC_ALL="zh_TW.UTF-8"` to update.
+
 #### Command 
 1. [40 useful commands](https://vitux.com/40-most-used-ubuntu-commands/)
 

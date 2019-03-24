@@ -1,6 +1,21 @@
 ## Command note
 Here I save some useful command for me, help to improve my working efficiency.
 
+### SSH key to server
+1. Generate ssh key on local machine by 
+```
+ssh-keygen -t rsa -b 4096 -C "user@mail"
+```
+Then add this key to local ssh-agent
+```
+eval $(ssh-agent -s)
+ssh-add ~/.ssh/id_rsa
+```
+Then copy the id_rsa.pub onto the server authorized_key file.
+```
+cat id_rsa.pub >> authorized_key
+```
+
 ### Using jupyter lab on remote server
 First start up the jupyter server on remote machine
 ```

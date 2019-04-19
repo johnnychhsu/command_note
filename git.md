@@ -15,3 +15,9 @@ We can modify these settings in `~/.gitconfig`:
 #### Branch
 1. Delete branch
 `git branch -d branch_name`
+
+#### Remote
+This would show the URL to the remote host
+```
+git remote -v
+```

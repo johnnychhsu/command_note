@@ -13,6 +13,16 @@ Then copy the id_rsa.pub onto the server authorized_key file.
 cat id_rsa.pub >> authorized_key
 ```
 
+### check open file
+1. List open file
+```
+lsof
+```
+2. List specific user's open file
+```
+lsof -u user
+```
+
 ### Check open port
 **list open port**
 ```command

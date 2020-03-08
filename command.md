@@ -13,6 +13,13 @@ Then copy the id_rsa.pub onto the server authorized_key file.
 cat id_rsa.pub >> authorized_key
 ```
 
+### Terminal shorcut
+`ctrl+E` moves cursor to the end of the line.
+`ctrl+A` moves cursor to the begining of the line.
+`ctrl+U` clear the lines before the cursor.
+`ctrl+R` search the previous command.
+`option+arrow` moves cursor to the next/previous word.
+
 ### check open file
 1. List open file
 ```
